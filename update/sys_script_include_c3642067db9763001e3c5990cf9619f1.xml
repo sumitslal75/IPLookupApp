@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_222136_iplookup.get_inc_number</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>get_inc_number</name>
+        <script><![CDATA[var get_inc_number = Class.create();
+get_inc_number.prototype ={
+
+	get_inc_number_fu : function(sysid){
+		
+		gs.log("tarun","bhaiya");
+		var gr_inc = new GlideRecord("incident");
+		gr_inc.addQuery("sys_id",sysid);
+		gr_inc.query();
+		if(gr_inc.next()){
+			gs.log("i am here babu bhaiya","Raju");
+			return gr_inc.number;
+		}
+	},
+    type: 'get_inc_number'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-02-04 07:43:46</sys_created_on>
+        <sys_id>c3642067db9763001e3c5990cf9619f1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>get_inc_number</sys_name>
+        <sys_package display_value="IPLookup" source="x_222136_iplookup">ec50cd09dbd3e3001e3c5990cf961949</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IPLookup">ec50cd09dbd3e3001e3c5990cf961949</sys_scope>
+        <sys_update_name>sys_script_include_c3642067db9763001e3c5990cf9619f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2019-02-04 08:37:11</sys_updated_on>
+    </sys_script_include>
+</record_update>
